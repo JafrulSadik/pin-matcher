@@ -36,7 +36,11 @@ document.querySelector("#key-pad").addEventListener('click', function(event){
 });
 
 function matching(){
-    if(input1.value == input2.value){
+    if(input1.value == "" || input2.value == ""){
+        match.style.display = "none";
+        notMatch.style.display = "none";
+    }
+    else if(input1.value == input2.value){
          match.style.display = "block";
          notMatch.style.display = "none";
          timeRestore();
@@ -53,11 +57,12 @@ function timeLeft(){
     warningLeft--;
 
     if(warningLeft == 0){
+
         input1.value = '';
         input2.value = '';
         
-        getContainer = document.querySelector('.container');
-        getContainer.style.display = 'none';
+        let getContainer = document.getElementById('fuck');
+        getContainer.remove();
 
         showWarning();
         
@@ -76,7 +81,14 @@ function timeRestore(){
 }
 
 function showWarning(){
-    let show = document.getElementById('lastWarning');
-    show.style.display = 'block';
-    console.log("hello World");
+    let listItem = document.getElementById('firstPart');
+    let newElement = document.createElement('div');
+        newElement.className = 'notify-section';
+    let newPera = document.createElement('p');
+        newPera.className = 'notify';
+        newPera.innerHTML = "You tried so many times!<br>Please refresh the page.";
+
+    let hello = newElement.appendChild(newPera);
+    listItem.appendChild(hello);
+
 }

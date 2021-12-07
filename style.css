@@ -112,9 +112,7 @@ color: #E0B612;
     display: none;
 }
 
-#lastWarning{
-    display : none;
-}
+
 
 .notify1 {
     color: #fff;
@@ -129,3 +127,7 @@ color: #E0B612;
     width: 35%;
     margin: 0 auto;
 }
+
+
+
+
