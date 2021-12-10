@@ -61,7 +61,7 @@ function timeLeft(){
         input1.value = '';
         input2.value = '';
         
-        let getContainer = document.getElementById('fuck');
+        let getContainer = document.getElementById('firstPage');
         getContainer.remove();
 
         showWarning();
